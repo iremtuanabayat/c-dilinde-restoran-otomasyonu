@@ -1,0 +1,324 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <windows.h>
+#include <string.h>
+
+void giris(){
+	
+ int secim4;
+ char kullaniciadi[30], sifre[30];
+	
+ printf("\n\n");
+	
+ printf("\t\t\t\t\t\tKullanici adinizi giriniz: ");
+ scanf("%s",&kullaniciadi);
+	
+ printf("\t\t\t\t\t\tSifrenizi giriniz: ");
+ scanf("%s",&sifre);
+	
+ printf("\t\t\t\t\t\tGiris Basarili.");
+ printf("\n\n");
+	
+ printf("Ana menuye donmek icin 0'a basiniz: ");
+ scanf("%d",&secim4);
+	
+ if (secim4==0){
+  system("cls");
+  ana_menu();
+ }
+ else{
+  system("cls");
+  printf("Gecersiz secim. Lutfen tekrar deneyiniz\n");
+  sleep(1);
+  system("cls");
+  sleep(1);
+  giris();
+ }
+	
+}
+
+
+void kayit_ol() {
+    int secim5;
+    char telefon[15], kullaniciadi[30], sifre[30];
+    
+    printf("\n\n");
+    
+    printf("\t\t\t\t\t\tTelefon numaranizi giriniz: ");
+    scanf("%s", telefon);
+    
+    printf("\t\t\t\t\t\tKullanici adinizi giriniz: ");
+    scanf("%s", kullaniciadi);
+    
+    printf("\t\t\t\t\t\tSifrenizi giriniz: ");
+    scanf("%s", sifre);
+    
+    printf("\t\t\t\t\t\tKayit Basarili.\n\n");
+    
+    printf("Ana menuye donmek icin 0'a basiniz: ");
+    scanf("%d", &secim5);
+    
+    if (secim5 == 0) {
+        system("cls");
+        ana_menu();
+    } else {
+        system("cls");
+        printf("Gecersiz secim. Lutfen tekrar deneyiniz\n");
+        sleep(1);
+        system("cls");
+        sleep(1);
+        kayit_ol();
+    }
+}
+
+
+void iletisim(){
+	
+ int secim3;
+	
+ printf("\n\n\n");
+ printf("\t\t\t\t\t\t* Telefon: 0505 132 78 98 *\n\n");
+ printf("\t\t\t\t\t\t* Adres: Karasu/Sakarya Gazi caddesi *");
+ printf("\n\n\n");
+	
+ printf("Ana menuye donmek icin 0'a basiniz: ");
+ scanf("%d",&secim3);
+	
+ if (secim3==0){
+  system("cls");
+  ana_menu();
+ }
+ else{
+  system("cls");
+  printf("Gecersiz secim. Lutfen tekrar deneyiniz\n");
+  sleep(1);
+  system("cls");
+  sleep(1);
+  iletisim();
+ }
+}
+
+
+void menu_liste(){
+	
+ int secim1;
+	
+ printf("\t\t\t\t\t\t\t -Menu Listesi-");
+ printf("\n\n");
+ printf("\t\t\t\t\t\t\t -Yiyecekler-\n\n");
+ printf("\t\t\t\t\t\t 1 - Hamburger : 75 TL\n");
+ printf("\t\t\t\t\t\t 2 - Lahmacun : 45 TL\n");
+ printf("\t\t\t\t\t\t 3 - Sosisli Patso : 50 TL\n");
+ printf("\t\t\t\t\t\t 4 - Kucuk Boy Pizza: 50 TL\n");
+ printf("\t\t\t\t\t\t 5 - Orta Boy Pizza : 60 TL\n");
+ printf("\t\t\t\t\t\t 6 - Buyuk Boy Pizza: 70 TL\n\n\n");
+ printf("\t\t\t\t\t\t\t -Icecekler-\n\n");
+ printf("\t\t\t\t\t\t 1 - Kola : 15 TL\n");
+ printf("\t\t\t\t\t\t 2 - Limonata : 20 TL\n");
+ printf("\t\t\t\t\t\t 3 - Ayran : 10 TL\n");
+ printf("\t\t\t\t\t\t 4 - Ice Tea : 20 TL\n\n\n");
+ printf("\t\t\t\t\t\t\t -Tatlilar-\n\n");
+ printf("\t\t\t\t\t\t 1 - Cheesecake : 50 TL\n");
+ printf("\t\t\t\t\t\t 2 - Profiterol : 30 TL\n");
+ printf("\t\t\t\t\t\t 3 - Brownie : 50 TL\n");
+ printf("\t\t\t\t\t\t 4 - Cupcake : 25 TL\n");
+ printf("\n\n");
+	
+ printf("Ana menuye donmek icin 0'a basiniz: ");
+ scanf("%d",&secim1);
+	
+ if (secim1==0){
+  system("cls");
+  ana_menu();
+ }
+ else{
+  system("cls");
+  printf("Gecersiz secim. Lutfen tekrar deneyiniz\n");
+  sleep(1);
+  system("cls");
+  sleep(1);
+  menu_liste();
+ }
+}
+
+
+void ana_menu(){
+	
+ int secim;
+	
+ printf("\n\t\t\t\t\t\t*****Hosgeldiniz!*****\n\n");
+    sleep(1);  
+ system("cls");
+
+    
+    printf("\n");
+    printf("\t\t\t\t\t\t* 1. Giris Yap *\n");
+    printf("\t\t\t\t\t\t* 2. Kayit Ol *\n");
+    printf("\t\t\t\t\t\t* 3. Menu *\n");
+    printf("\t\t\t\t\t\t* 4. Iletisim *\n");
+    printf("\t\t\t\t\t\t* 5. Siprais ver *\n");
+    printf("\t\t\t\t\t\t* 0. Cikis *\n\n");
+    
+    printf("\n\t\t\t\t\t\tSeciminizi yapin: ");
+    scanf("%d", &secim);
+	
+ if (secim == 1){
+  system("cls");
+  giris();
+ }
+ else if (secim == 2){
+  system("cls");
+  kayit_ol();
+ }
+ else if (secim == 3){
+  system("cls");
+  menu_liste();
+ }
+ else if (secim == 4){
+  system("cls");
+  iletisim();
+ }
+ else if (secim == 5){
+  system("cls");
+  sepet();
+ }
+ else if (secim == 0){
+  printf("Cikis yapiliyor");
+  exit(0);
+ }
+}
+
+
+void sepet() {
+    int secim2, adet, toplam = 0;
+
+    printf("\t\t\t\tYiyecek ister misiniz? (1-Evet, 0-Hayir): ");
+    scanf("%d", &secim2);
+    if (secim2 == 1) {
+        while (1) {
+            printf("\n");
+            printf("\t\t\t\t\t* 1 - Hamburger (75 TL)\n\t\t\t\t\t* 2 - Lahmacun (45 TL)\n\t\t\t\t\t* 3 - Sosisli Patso (50 TL)\n\t\t\t\t\t* 4 - Kucuk Boy Pizza (50 TL)\n\t\t\t\t\t* 5 - Orta Boy Pizza (60 TL)\n\t\t\t\t\t* 6 - Buyuk Boy Pizza (70 TL)\n");
+            printf("\n");
+   printf("\t\t\t\tHangi yiyecegi istiyorsunuz? ");
+   scanf("%d", &secim2);
+            if (secim2 < 1 || secim2 > 6) {
+                printf("\t\t\t\tGecersiz secim. Lutfen tekrar deneyin.\n");
+                continue;
+            }
+            printf("\n");
+            printf("\t\t\t\tKac adet istiyorsunuz? ");
+            scanf("%d", &adet);
+            printf("\n");
+            printf("\n");
+
+            switch (secim2) {
+                case 1: toplam += adet * 75; break;
+                case 2: toplam += adet * 45; break;
+                case 3: toplam += adet * 50; break;
+                case 4: toplam += adet * 50; break;
+                case 5: toplam += adet * 60; break;
+                case 6: toplam += adet * 70; break;
+            }
+
+            printf("\t\t\t\tBaska bir yiyecek ister misiniz? (1-Evet, 0-Hayir): ");
+            scanf("%d", &secim2);
+            if (secim2 == 0) {
+                system("cls");
+                break;
+            }
+        }
+    } else {
+        system("cls");
+    }
+
+    printf("\t\t\t\tIcecek ister misiniz? (1-Evet, 0-Hayir): ");
+    scanf("%d", &secim2);
+    if (secim2 == 1) {
+        while (1) {
+         
+            printf("\n");
+            printf("\t\t\t\t\t* 1 - Kola (15 TL)\n\t\t\t\t\t* 2 - Limonata (20 TL)\n\t\t\t\t\t* 3 - Ayran (10 TL)\n\t\t\t\t\t* 4 - Ice Tea (20 TL)\n");
+            printf("\n");
+            printf("\t\t\t\tHangi icecegi istiyorsunuz? ");
+   scanf("%d", &secim2);
+            if (secim2 < 1 || secim2 > 4) {
+                printf("\t\t\t\tGecersiz secim. Lutfen tekrar deneyin.\n");
+                continue;
+            }
+            printf("\n");
+            printf("\t\t\t\tKac adet istiyorsunuz? ");
+            scanf("%d", &adet);
+            printf("\n");
+            printf("\n");
+
+            switch (secim2) {
+                case 1: toplam += adet * 15; break;
+                case 2: toplam += adet * 20; break;
+                case 3: toplam += adet * 10; break;
+                case 4: toplam += adet * 20; break;
+            }
+
+            printf("\t\t\t\tBaska bir icecek ister misiniz? (1-Evet, 0-Hayir): ");
+            scanf("%d", &secim2);
+            if (secim2 == 0) {
+                system("cls");
+                break;
+            }
+        }
+    } else {
+        system("cls");
+    }
+
+    printf("\t\t\t\tTatli ister misiniz? (1-Evet, 0-Hayir): ");
+    scanf("%d", &secim2);
+    if (secim2 == 1) {
+        while (1) {
+         
+            printf("\n");
+            printf("\t\t\t\t\t* 1 - Cheesecake (50 TL)\n\t\t\t\t\t* 2 - Profiterol (30 TL)\n\t\t\t\t\t* 3 - Brownie (50 TL)\n\t\t\t\t\t* 4 - Cupcake (25 TL)\n");
+            printf("\n");
+            printf("\t\t\t\tHangi tatliyi istiyorsunuz? ");
+   scanf("%d", &secim2);
+            if (secim2 < 1 || secim2 > 4) {
+                printf("\t\t\t\tGecersiz secim. Lutfen tekrar deneyin.\n");
+                continue;
+            }
+            printf("\n");
+            printf("\t\t\t\tKac adet istiyorsunuz? ");
+            scanf("%d", &adet);
+            printf("\n");
+            printf("\n");
+
+            switch (secim2) {
+                case 1: toplam += adet * 50; break;
+                case 2: toplam += adet * 30; break;
+                case 3: toplam += adet * 50; break;
+                case 4: toplam += adet * 25; break;
+            }
+
+            printf("\t\t\t\tBaska bir tatli ister misiniz? (1-Evet, 0-Hayir): ");
+            scanf("%d", &secim2);
+            if (secim2 == 0) {
+                system("cls");
+                break;
+            }
+        }
+    } else {
+        system("cls");
+    }
+
+    printf("\n\n\t\t\t\tToplam Tutar: %d TL\n", toplam);
+
+    printf("\n\t\t\t\tAna menuye donmek icin herhangi bir tusa basin: ");
+    getchar(); getchar();
+    system("cls");
+    ana_menu();
+}
+
+
+int main() {
+ ana_menu();
+ return 0;
+}
